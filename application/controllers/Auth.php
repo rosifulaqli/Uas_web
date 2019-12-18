@@ -31,7 +31,7 @@ class Auth extends CI_Controller {
 
 	public function do_login(){
 		$user        =	$_POST['username'];
-		$pass        =	md5($_POST['password']);
+		$pass        =	($_POST['password']);
 		
 		$session_now =  $this->check_user($user , $pass);
 		$text 		 =  'Selamat Datang '.$user;
